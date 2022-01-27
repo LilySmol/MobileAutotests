@@ -1,6 +1,7 @@
 package tests;
 
 import helpers.Waiter;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -16,8 +17,8 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTestSetUp {
 
-    protected AndroidDriver driver;
-    private String apkFilePath = "src\\main\\resources\\app\\joom(4.2.1).apk";
+    protected AndroidDriver<MobileElement> driver;
+    private String apkFilePath = "src\\main\\resources\\app\\ApiDemos-debug.apk";
 
     @BeforeMethod
     public void setUpDriver() throws MalformedURLException {

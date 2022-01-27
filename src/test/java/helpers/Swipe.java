@@ -14,7 +14,7 @@ public class Swipe {
         int startPoint = (int) (windowSize.getHeight() * 0.05);
         int endPoint = (int) (windowSize.getHeight() * 0.75);
         new TouchAction(driver)
-                .longPress(PointOption.point(width, startPoint))
+                .press(PointOption.point(width, startPoint))
                 .moveTo(PointOption.point(width, endPoint))
                 .release().perform();
     }
