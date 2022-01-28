@@ -50,7 +50,8 @@ public class AppiumDemoTests extends BaseTestSetUp {
     public void test(){
         driver.findElement(MobileBy.AccessibilityId("Text")).click();
         driver.findElement(MobileBy.AccessibilityId("Marquee")).click();
-        String buttonText = driver.findElements(MobileBy.xpath("//android.widget.Button")).get(0).getText();
+        String buttonText = driver.findElementsByAndroidUIAutomator(
+                "new UiScrollable(new UiSelector().className(\"android.widget.Button\"))").get(0).getText();
 
         Assert.assertEquals(buttonText, "This use the default marquee animation limit of 3");
     }
